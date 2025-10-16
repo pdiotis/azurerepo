@@ -45,12 +45,11 @@ jobs:
 #          output_location: "/" # Built app content directory - optional
 #          app_build_command: "" # just upload files, do not build
 #          skip_app_build: true
-
-app_location: "/"           # frontend code
-api_location: "api"         # φάκελος με Azure Functions
-output_location: "/"        # αν δεν κάνεις build, σωστό
-app_build_command: ""       # δεν κάνουμε build
-skip_app_build: true
+          app_location: "/"           # frontend code
+          api_location: "api"         # φάκελος με Azure Functions
+          output_location: "/"        # αν δεν κάνεις build, σωστό
+          app_build_command: ""       # δεν κάνουμε build
+          skip_app_build: true
 
 
           github_id_token: ${{ steps.idtoken.outputs.result }}
@@ -67,6 +66,7 @@ skip_app_build: true
         uses: Azure/static-web-apps-deploy@v1
         with:
           action: "close"
+
 
 
 
